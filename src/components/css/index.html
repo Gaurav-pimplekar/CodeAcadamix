@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+  const cssTopics = [
+  { name: "Introduction to CSS" },
+  { name: "CSS section resources and Source Code" },
+  { name: "What is CSS" },
+  { name: "Basics of CSS" },
+  { name: "CSS Inline Style" },
+  { name: "Source Code inline Styles" },
+  { name: "CSS Style Tag Styling" },
+  { name: "CSS selection example" },
+  { name: "Creating and using CSS file" },
+  { name: "Attach Style CSS file" },
+  { name: "CSS selection and classes" },
+  { name: "CSS element selection Class id and tag" },
+  { name: "CSS Colors" },
+  { name: "CSS Color Selection and options example" },
+  { name: "CSS Background Property" },
+  { name: "CSS Background Color style example" },
+  { name: "CSS Display Property" },
+  { name: "Measures and Properties CSS" },
+  { name: "CSS Divs and Spans" },
+  { name: "Source Code examples CSS divs and spans and styling" },
+  { name: "Styling Text CSS" },
+  { name: "CSS font Family" },
+  { name: "Google Fonts CSS" },
+  { name: "CSS float elements" },
+  { name: "CSS Floats Images" },
+  { name: "CSS Box model source example" },
+  { name: "CSS Box Model" },
+  { name: "CSS outline source code examples" },
+  { name: "CSS Float examples source" },
+  { name: "CSS position" },
+  { name: "CSS position example source code" },
+  { name: "CSS Outline" },
+  { name: "CSS Overflow and MaxWidth" },
+  { name: "CSS and Tables" },
+  { name: "CSS for tables" },
+  { name: "CSS Element Alignments" },
+  { name: "CSS Pseudo Classes" },
+  { name: "Source Code" },
+  { name: "CSS fun with Hyperlinks" },
+  { name: "CSS Display Property" },
+  { name: "CSS3 Border Image" },
+  { name: "CSS3 Multi Background" },
+  { name: "CSS3 Shadow" },
+  { name: "CSS3 Gradients" },
+  { name: "CSS3 Colors" },
+  { name: "CSS3 Animation" },
+  { name: "CSS3 Multi Columns" },
+  { name: "CSS3 User Interface" },
+  { name: "CSS3 Box Sizing" },
+  { name: "CSS3 Responsive" }
+];
+
+
+  document.write(
+    `
+      [
+        ${cssTopics.map((item, index) => {
+      return `{ name: "${item.name}", exercise: ["Exercise 1"], intro: "<"+"CssChap${index + 1}"+"/>", exerciseComponents: ["CssExercise${index + 1}"] },`
+    })}
+      ]
+    `
+  )
+
+</script>
+
+</html>

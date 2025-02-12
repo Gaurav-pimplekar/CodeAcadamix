@@ -1,0 +1,71 @@
+﻿import React from "react";
+import { FaJs, FaBookOpen, FaBolt, FaCogs, FaLightbulb } from "react-icons/fa";
+
+const JsChap26 = () => {
+  return (
+    <div className="p-6 max-w-4xl mx-auto bg-white shadow-lg rounded-lg">
+      <h1 className="text-3xl font-bold flex items-center gap-2 text-yellow-500">
+        <FaJs /> JavaScript Event Listeners
+      </h1>
+      
+      {/* Introduction */}
+      <section className="mt-4">
+        <h2 className="text-2xl font-semibold flex items-center gap-2 text-blue-600">
+          <FaBookOpen /> Introduction
+        </h2>
+        <p className="text-gray-700">
+          Event listeners in JavaScript allow developers to handle user interactions and system-generated events efficiently. They provide a way to execute functions when a particular event occurs.
+        </p>
+      </section>
+      
+      {/* Adding Event Listeners */}
+      <section className="mt-6">
+        <h2 className="text-2xl font-semibold flex items-center gap-2 text-blue-600">
+          <FaBolt /> Adding Event Listeners
+        </h2>
+        <p className="text-gray-700">The <code>addEventListener()</code> method is used to attach an event handler to an element.</p>
+        <pre className="bg-gray-900 text-white p-3 rounded-md overflow-x-auto">
+          <code>{`document.getElementById("btn").addEventListener("click", function() {
+  alert("Button clicked!");
+});`}</code>
+        </pre>
+      </section>
+      
+      {/* Removing Event Listeners */}
+      <section className="mt-6">
+        <h2 className="text-2xl font-semibold flex items-center gap-2 text-blue-600">
+          <FaCogs /> Removing Event Listeners
+        </h2>
+        <p className="text-gray-700">To remove an event listener, use <code>removeEventListener()</code>. The function reference must be the same.</p>
+        <pre className="bg-gray-900 text-white p-3 rounded-md overflow-x-auto">
+          <code>{`function handleClick() {
+  alert("Button clicked!");
+}
+let btn = document.getElementById("btn");
+btn.addEventListener("click", handleClick);
+btn.removeEventListener("click", handleClick);`}</code>
+        </pre>
+      </section>
+      
+      {/* Best Practices */}
+      <section className="mt-6">
+        <h2 className="text-2xl font-semibold flex items-center gap-2 text-blue-600">
+          <FaLightbulb /> Best Practices
+        </h2>
+        <ul className="list-disc pl-6 text-gray-700">
+          <li>Use <code>addEventListener()</code> instead of inline event handlers for better separation of concerns.</li>
+          <li>Always remove event listeners when they are no longer needed to prevent memory leaks.</li>
+          <li>Use event delegation to optimize performance when handling multiple elements.</li>
+          <li>Use named functions instead of anonymous functions for better readability and maintainability.</li>
+        </ul>
+      </section>
+      
+      {/* Conclusion */}
+      <p className="mt-6 text-gray-700 flex items-center gap-2">
+        <FaBolt className="text-green-500" /> Mastering event listeners will help you create interactive and dynamic web applications!
+      </p>
+    </div>
+  );
+};
+
+export default JsChap26;
