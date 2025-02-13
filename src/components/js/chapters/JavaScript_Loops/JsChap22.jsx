@@ -19,16 +19,73 @@ const JsChap22 = () => {
       </section>
       
       {/* Types of Loops */}
-      <section className="mt-6">
-        <h2 className="text-2xl font-semibold flex items-center gap-2 text-blue-600">
-          <FaSyncAlt /> Types of Loops
-        </h2>
-        <ul className="list-disc pl-6 text-gray-700">
-          <li><code>for</code> loop - Runs a block of code a specific number of times.</li>
-          <li><code>while</code> loop - Runs a block of code while a condition is true.</li>
-          <li><code>do-while</code> loop - Runs at least once, then continues if a condition is true.</li>
-        </ul>
-      </section>
+      <div className="p-6 bg-gray-100 min-h-screen">
+      {/* Section Title */}
+      <h2 className="text-3xl font-bold flex items-center gap-2 text-blue-600">
+        <FaSyncAlt /> Types of Loops in JavaScript
+      </h2>
+      <p className="mt-2 text-gray-700 text-lg">
+        Loops allow us to execute a block of code multiple times. Here are the most common loop types in JavaScript:
+      </p>
+
+      {/* Loop Types */}
+      <ul className="list-disc pl-6 space-y-2 text-gray-700 text-lg">
+        <li><code>for</code> loop - Runs a block of code a specific number of times.</li>
+        <li><code>while</code> loop - Runs a block of code while a condition is <code>true</code>.</li>
+        <li><code>do-while</code> loop - Runs at least once, then continues if a condition is <code>true</code>.</li>
+      </ul>
+
+      {/* Code Examples */}
+      <div className="mt-6">
+        {/* For Loop Example */}
+        <h3 className="text-2xl font-semibold text-green-600">🔁 For Loop</h3>
+        <pre className="bg-gray-900 text-white p-4 rounded-md overflow-x-auto mt-2">
+          <code>{`for (let i = 1; i <= 5; i++) {
+  console.log("Iteration:", i);
+}
+// Output: 1, 2, 3, 4, 5`}</code>
+        </pre>
+      </div>
+
+      <div className="mt-6">
+        {/* While Loop Example */}
+        <h3 className="text-2xl font-semibold text-green-600">🔄 While Loop</h3>
+        <pre className="bg-gray-900 text-white p-4 rounded-md overflow-x-auto mt-2">
+          <code>{`let count = 1;
+while (count <= 3) {
+  console.log("Count:", count);
+  count++;
+}
+// Output: 1, 2, 3`}</code>
+        </pre>
+      </div>
+
+      <div className="mt-6">
+        {/* Do-While Loop Example */}
+        <h3 className="text-2xl font-semibold text-green-600">🔂 Do-While Loop</h3>
+        <pre className="bg-gray-900 text-white p-4 rounded-md overflow-x-auto mt-2">
+          <code>{`let num = 1;
+do {
+  console.log("Number:", num);
+  num++;
+} while (num <= 2);
+// Output: 1, 2`}</code>
+        </pre>
+      </div>
+
+      {/* Best Practices */}
+      <h3 className="mt-6 text-2xl font-semibold text-green-600">💡 Best Practices</h3>
+      <ul className="list-disc pl-6 space-y-2 text-gray-700 text-lg">
+        <li>Use a <code>for</code> loop when the number of iterations is known beforehand.</li>
+        <li>Use a <code>while</code> loop when looping depends on a condition.</li>
+        <li>Use a <code>do-while</code> loop when at least one execution is required.</li>
+      </ul>
+
+      {/* Lightbulb Tip */}
+      <p className="flex items-center mt-6 text-xl text-green-600">
+        <FaLightbulb className="mr-2" /> **Avoid infinite loops! Ensure the loop condition changes over time.**
+      </p>
+    </div>
       
       {/* Example Usage */}
       <section className="mt-6">

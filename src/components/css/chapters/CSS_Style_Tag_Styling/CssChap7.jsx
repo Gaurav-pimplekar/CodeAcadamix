@@ -1,119 +1,103 @@
 ﻿import React from "react";
-import { FaCss3Alt, FaCode, FaClipboardList, FaFileCode, FaRegLightbulb } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
 
 const CssChap7 = () => {
   return (
-    <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
-      <h1 className="text-3xl font-bold text-blue-600 mb-4 flex items-center">
-        <FaCss3Alt className="mr-2" /> CSS Style Tag Styling
-      </h1>
-      
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
-          <FaClipboardList className="mr-2 text-yellow-500" /> Overview
-        </h2>
-        <p className="text-gray-800 mt-2">
-          Using the <code>&lt;style&gt;</code> tag in HTML allows us to apply CSS styles directly within a document. This approach provides better separation of concerns compared to inline styles while still being included in the same file.
-        </p>
-      </section>
-      
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
-          <FaFileCode className="mr-2 text-green-500" /> Style Tag in HTML
-        </h2>
-        <pre className="bg-gray-800 text-white p-4 rounded-lg mt-4">
-          <code>
-            {`<!-- HTML Example with Style Tag -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>CSS Style Tag Example</title>
-    <style>
-        body {
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            color: blue;
-            text-align: center;
-        }
-        p {
-            font-size: 18px;
-            background-color: lightgray;
-            padding: 10px;
-        }
-    </style>
+    <div className="p-6 bg-gray-100 min-h-screen">
+      <div className="flex items-center gap-4 mb-6">
+        <FaCss3Alt className="text-blue-500 text-4xl" />
+        <h1 className="text-3xl font-bold">What is Internal CSS Style Tag?</h1>
+      </div>
+
+      <p className="text-lg mb-4">
+        <strong>Definition:</strong> Internal CSS is a method of styling web pages by placing CSS rules inside a
+        <code className="bg-gray-200 px-1 rounded"> &lt;style&gt; </code> tag within the
+        <code className="bg-gray-200 px-1 rounded"> &lt;head&gt; </code> section of an HTML document.
+        It allows developers to apply styles to a single page without requiring an external stylesheet.
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-4">Syntax:</h2>
+      <pre className="bg-black text-white p-4 rounded-md overflow-x-auto">
+        {`<head>
+  <style>
+    p {
+      color: blue;
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Styled with a Style Tag</h1>
-    <p>This paragraph is styled using a &lt;style&gt; tag.</p>
-</body>
-</html>`}
-          </code>
-        </pre>
-      </section>
-      
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
-          <FaCode className="mr-2 text-blue-500" /> Adding Styles Dynamically in JavaScript
-        </h2>
-        <pre className="bg-gray-800 text-white p-4 rounded-lg mt-4">
-          <code>
-            {`// JavaScript Example - Adding Style Tag Dynamically
-const style = document.createElement("style");
-style.innerHTML = \`
-    .dynamicText {
-        color: red;
-        font-size: 20px;
-        font-weight: bold;
-    }
-\`;
-document.head.appendChild(style);
+  <p>This is a styled paragraph.</p>
+</body>`}
+      </pre>
 
-document.body.innerHTML += '<p class="dynamicText">Styled dynamically via JavaScript</p>';
-            `}
-          </code>
-        </pre>
-      </section>
-      
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
-          <FaCode className="mr-2 text-purple-500" /> Using Style Tag in React
-        </h2>
-        <pre className="bg-gray-800 text-white p-4 rounded-lg mt-4">
-          <code>
-            {`// React Example
-function StyledComponent() {
-  return (
-    <div>
-      <style>
-        {\`
-          .reactStyled {
-            color: green;
-            font-size: 24px;
-            border: 2px solid black;
-            padding: 10px;
-          }
-        \`}
-      </style>
-      <p className="reactStyled">This paragraph is styled using a style tag inside React.</p>
-    </div>
-  );
-}`}            
-          </code>
-        </pre>
-      </section>
-      
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
-          <FaRegLightbulb className="mr-2 text-yellow-500" /> Best Practices
-        </h2>
-        <ul className="list-disc list-inside text-gray-800 mt-2">
-          <li>Use the <code>&lt;style&gt;</code> tag for small projects or quick styling.</li>
-          <li>For maintainability, external stylesheets are recommended for large-scale applications.</li>
-          <li>Avoid excessive use of style tags in multiple places, as they can make debugging difficult.</li>
-        </ul>
-      </section>
+      <p className="text-lg mb-4">
+        In this example, all <code className="bg-gray-200 px-1 rounded">&lt;p&gt;</code> elements on the page will be blue with a font size of 18px.
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-4">Advantages of Internal CSS:</h2>
+      <ul className="list-disc pl-6 space-y-2">
+        <li><strong>✔ Organized in One File –</strong> Styles are kept within the HTML document, making it easier to manage small projects.</li>
+        <li><strong>✔ Higher Specificity –</strong> Internal CSS has a higher specificity than external stylesheets but lower than inline CSS.</li>
+        <li><strong>✔ No Additional Requests –</strong> Since styles are within the document, there’s no need for extra file requests, reducing HTTP requests.</li>
+      </ul>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-4">Disadvantages of Internal CSS:</h2>
+      <ul className="list-disc pl-6 space-y-2">
+        <li><strong>❌ Not Reusable –</strong> Styles are limited to a single HTML document, making it inefficient for larger projects.</li>
+        <li><strong>❌ Increases Page Load Time –</strong> Too much CSS in the HTML file can slow down page rendering.</li>
+        <li><strong>❌ Harder to Maintain –</strong> Managing large amounts of CSS within an HTML document can become messy.</li>
+      </ul>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-4">Example: Internal CSS vs. Other Methods</h2>
+
+      <h3 className="text-xl font-semibold mt-4 mb-2">Using Internal CSS:</h3>
+      <pre className="bg-black text-white p-4 rounded-md overflow-x-auto">
+        {`<head>
+  <style>
+    h1 {
+      color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello, World!</h1>
+</body>`}
+      </pre>
+
+      <h3 className="text-xl font-semibold mt-4 mb-2">Using External CSS:</h3>
+      <pre className="bg-black text-white p-4 rounded-md overflow-x-auto">
+        {`/* styles.css */
+h1 {
+  color: red;
+  text-align: center;
+}`}
+      </pre>
+      <pre className="bg-black text-white p-4 rounded-md overflow-x-auto">
+        {`<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Hello, World!</h1>
+</body>`}
+      </pre>
+
+      <h3 className="text-xl font-semibold mt-4 mb-2">Using Inline CSS:</h3>
+      <pre className="bg-black text-white p-4 rounded-md overflow-x-auto">
+        {`<h1 style="color: red; text-align: center;">Hello, World!</h1>`}
+      </pre>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-4">When to Use Internal CSS?</h2>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>✅ For single-page web designs.</li>
+        <li>✅ When external stylesheets are not required.</li>
+        <li>✅ For quick prototyping and small-scale styling.</li>
+      </ul>
+
+      <p className="text-lg mt-4">
+        However, for larger projects, <strong>external CSS</strong> is recommended for better maintainability and performance. 🚀
+      </p>
     </div>
   );
 };

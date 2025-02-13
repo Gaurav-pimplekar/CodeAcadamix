@@ -1,5 +1,9 @@
 ﻿import React from "react";
 import { FaCss3Alt, FaPaintBrush, FaCogs, FaPalette, FaLayerGroup, FaRegLightbulb } from "react-icons/fa";
+import { AiOutlineBgColors, AiOutlineBorder, AiOutlineFontSize } from "react-icons/ai";
+import { BiAlignMiddle } from "react-icons/bi";
+import { MdOutlineFormatColorText } from "react-icons/md";
+
 
 const CssChap4 = () => {
   return (
@@ -80,6 +84,92 @@ p {
 }`}            
           </code>
         </pre>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-2xl font-semibold mb-2">Introduction</h2>
+        <p className="text-gray-700">
+          CSS (Cascading Style Sheets) is used to style HTML elements. It controls the layout, colors, 
+          fonts, and positioning of elements on a webpage. Below are some essential CSS properties you should know.
+        </p>
+      </section>
+
+      {/* CSS Properties Section */}
+      <section className="mb-6">
+        <h2 className="text-2xl font-semibold mb-4">Common CSS Properties</h2>
+        <div className="space-y-6">
+          
+          {/* Color Property */}
+          <div className="p-4 bg-white rounded-lg shadow">
+            <div className="flex items-center gap-3 mb-2">
+              <MdOutlineFormatColorText className="text-red-500 text-2xl" />
+              <h3 className="text-xl font-semibold">1. Color</h3>
+            </div>
+            <p className="text-gray-700">
+              The <code className="bg-gray-200 px-1 rounded">color</code> property sets the text color.
+            </p>
+            <pre className="bg-gray-900 text-white p-3 rounded mt-2">
+              {`p { color: blue; }`}
+            </pre>
+          </div>
+
+          {/* Background Color */}
+          <div className="p-4 bg-white rounded-lg shadow">
+            <div className="flex items-center gap-3 mb-2">
+              <AiOutlineBgColors className="text-green-500 text-2xl" />
+              <h3 className="text-xl font-semibold">2. Background-Color</h3>
+            </div>
+            <p className="text-gray-700">
+              The <code className="bg-gray-200 px-1 rounded">background-color</code> property defines the background color of an element.
+            </p>
+            <pre className="bg-gray-900 text-white p-3 rounded mt-2">
+              {`div { background-color: lightgray; }`}
+            </pre>
+          </div>
+
+          {/* Font Size */}
+          <div className="p-4 bg-white rounded-lg shadow">
+            <div className="flex items-center gap-3 mb-2">
+              <AiOutlineFontSize className="text-purple-500 text-2xl" />
+              <h3 className="text-xl font-semibold">3. Font Size</h3>
+            </div>
+            <p className="text-gray-700">
+              The <code className="bg-gray-200 px-1 rounded">font-size</code> property sets the text size.
+            </p>
+            <pre className="bg-gray-900 text-white p-3 rounded mt-2">
+              {`h1 { font-size: 24px; }`}
+            </pre>
+          </div>
+
+          {/* Text Alignment */}
+          <div className="p-4 bg-white rounded-lg shadow">
+            <div className="flex items-center gap-3 mb-2">
+              <BiAlignMiddle className="text-yellow-500 text-2xl" />
+              <h3 className="text-xl font-semibold">4. Text Alignment</h3>
+            </div>
+            <p className="text-gray-700">
+              The <code className="bg-gray-200 px-1 rounded">text-align</code> property aligns text inside an element.
+            </p>
+            <pre className="bg-gray-900 text-white p-3 rounded mt-2">
+              {`p { text-align: center; }`}
+            </pre>
+          </div>
+
+          {/* Border */}
+          <div className="p-4 bg-white rounded-lg shadow">
+            <div className="flex items-center gap-3 mb-2">
+              <AiOutlineBorder className="text-blue-500 text-2xl" />
+              <h3 className="text-xl font-semibold">5. Border</h3>
+            </div>
+            <p className="text-gray-700">
+              The <code className="bg-gray-200 px-1 rounded">border</code> property defines a border around an element.
+            </p>
+            <pre className="bg-gray-900 text-white p-3 rounded mt-2">
+              {`div { border: 2px solid black; }`}
+            </pre>
+          </div>
+
+        </div>
       </section>
       
       <section className="mb-6">

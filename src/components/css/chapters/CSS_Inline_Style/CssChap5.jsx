@@ -1,90 +1,85 @@
 ﻿import React from "react";
-import { FaCss3Alt, FaPaintBrush, FaCode, FaRegLightbulb, FaExclamationCircle } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
 
 const CssChap5 = () => {
   return (
-    <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
-      <h1 className="text-3xl font-bold text-blue-600 mb-4 flex items-center">
-        <FaCss3Alt className="mr-2" /> CSS Inline Style
-      </h1>
+    <div className="p-6 bg-gray-100 min-h-screen">
+      <div className="flex items-center gap-4 mb-6">
+        <FaCss3Alt className="text-blue-500 text-4xl" />
+        <h1 className="text-3xl font-bold">What is Inline CSS?</h1>
+      </div>
+      <h2 className="text-2xl font-semibold mt-6 mb-2">Definition:</h2>
+      <p className="mb-4">
+        Inline CSS is a method of applying styles directly within an HTML element using the <code>style</code> attribute. It allows developers to define CSS rules for a specific element without using external or internal stylesheets.
+      </p>
       
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
-          <FaPaintBrush className="mr-2 text-yellow-500" /> Introduction to Inline Styles
-        </h2>
-        <p className="text-gray-800 mt-2">
-          Inline styles allow you to apply CSS directly within an HTML element using the <code>style</code> attribute. This approach is useful for quick styling but should be used sparingly to maintain clean and reusable code.
-        </p>
-      </section>
+      <h2 className="text-2xl font-semibold mt-6 mb-2">Syntax:</h2>
+      <pre className="bg-gray-900 text-white p-4 rounded-md overflow-auto">
+        {`<element style="property: value;">`}
+      </pre>
       
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
-          <FaCode className="mr-2 text-green-500" /> Example of Inline Style
-        </h2>
-        <p className="text-gray-800 mt-2">
-          Here’s an example of how inline styles are applied to HTML elements:
-        </p>
-        <pre className="bg-gray-800 text-white p-4 rounded-lg mt-4">
-          <code>
-            {`<!-- Inline style example -->
-<p style="color: red; font-size: 20px;">This is a styled paragraph.</p>`}
-          </code>
-        </pre>
-      </section>
+      <h2 className="text-2xl font-semibold mt-6 mb-2">Example:</h2>
+      <pre className="bg-gray-900 text-white p-4 rounded-md overflow-auto">
+        {`<p style="color: blue; font-size: 18px;">This is a blue paragraph.</p>`}
+      </pre>
+      <p className="mb-4">This <code>&lt;p&gt;</code> tag will have blue text with a font size of 18px.</p>
       
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
-          <FaCode className="mr-2 text-blue-500" /> Inline Style in JavaScript (React)
-        </h2>
-        <p className="text-gray-800 mt-2">
-          In React, inline styles are applied using a JavaScript object where property names are written in camelCase:
-        </p>
-        <pre className="bg-gray-800 text-white p-4 rounded-lg mt-4">
-          <code>
-            {`const myStyle = {
-  color: "blue",
-  fontSize: "22px",
-  backgroundColor: "lightgray"
-};
-
-function StyledComponent() {
-  return <p style={myStyle}>This is a React inline styled paragraph.</p>;
-}`}            
-          </code>
-        </pre>
-      </section>
+      <h2 className="text-2xl font-semibold mt-6 mb-2">Advantages of Inline CSS:</h2>
+      <ul className="list-disc pl-6 mb-4">
+        <li><strong>✔ Quick Application:</strong> Styles are applied directly to elements without needing an external file.</li>
+        <li><strong>✔ Higher Specificity:</strong> Inline styles override internal and external styles.</li>
+        <li><strong>✔ Useful for Small Adjustments:</strong> Ideal for quick fixes or testing.</li>
+      </ul>
       
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
-          <FaRegLightbulb className="mr-2 text-purple-500" /> Best Practices
-        </h2>
-        <ul className="list-disc list-inside text-gray-800 mt-2">
-          <li>Avoid using inline styles for large-scale projects to ensure maintainability.</li>
-          <li>Use CSS classes or external stylesheets for better separation of concerns.</li>
-          <li>Inline styles should only be used for dynamic styling that requires JavaScript logic.</li>
-        </ul>
-      </section>
+      <h2 className="text-2xl font-semibold mt-6 mb-2">Disadvantages of Inline CSS:</h2>
+      <ul className="list-disc pl-6 mb-4">
+        <li><strong>❌ Difficult to Maintain:</strong> Styling multiple elements requires repeating code.</li>
+        <li><strong>❌ Reduces Readability:</strong> Mixing CSS with HTML makes the code less organized.</li>
+        <li><strong>❌ Not Reusable:</strong> Styles must be written for each element separately.</li>
+      </ul>
       
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
-          <FaExclamationCircle className="mr-2 text-red-500" /> Example: Dynamically Changing Styles
-        </h2>
-        <p className="text-gray-800 mt-2">
-          You can dynamically change styles in JavaScript using event listeners. Here’s an example:
-        </p>
-        <pre className="bg-gray-800 text-white p-4 rounded-lg mt-4">
-          <code>
-            {`document.body.innerHTML += '<button id="changeStyle">Change Style</button>';
-document.body.innerHTML += '<p id="styledText">Dynamic Styling</p>';
-
-document.getElementById("changeStyle").addEventListener("click", () => {
-  document.getElementById("styledText").style.color = "green";
-  document.getElementById("styledText").style.fontSize = "24px";
-  document.getElementById("styledText").style.fontWeight = "bold";
-});`}
-          </code>
-        </pre>
-      </section>
+      <h2 className="text-2xl font-semibold mt-6 mb-2">Example Comparison:</h2>
+      <h3 className="text-xl font-semibold mt-4">Using Inline CSS:</h3>
+      <pre className="bg-gray-900 text-white p-4 rounded-md overflow-auto">
+        {`<h1 style="color: red; text-align: center;">Hello, World!</h1>`}
+      </pre>
+      
+      <h3 className="text-xl font-semibold mt-4">Using Internal CSS:</h3>
+      <pre className="bg-gray-900 text-white p-4 rounded-md overflow-auto">
+        {`<head>
+  <style>
+    h1 {
+      color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+<h1>Hello, World!</h1>`}
+      </pre>
+      
+      <h3 className="text-xl font-semibold mt-4">Using External CSS:</h3>
+      <pre className="bg-gray-900 text-white p-4 rounded-md overflow-auto">
+        {`/* style.css */
+h1 {
+  color: red;
+  text-align: center;
+}`}
+      </pre>
+      <pre className="bg-gray-900 text-white p-4 rounded-md overflow-auto">
+        {`<link rel="stylesheet" href="style.css">
+<h1>Hello, World!</h1>`}
+      </pre>
+      
+      <h2 className="text-2xl font-semibold mt-6 mb-2">When to Use Inline CSS?</h2>
+      <ul className="list-disc pl-6 mb-4">
+        <li><strong>✅ Quick styling for a single element.</strong></li>
+        <li><strong>✅ When external stylesheets are unavailable.</strong></li>
+        <li><strong>✅ Testing or debugging styles in a live environment.</strong></li>
+      </ul>
+      
+      <p className="mb-4">
+        However, for larger projects, it's best to use internal or external CSS for better maintainability and reusability. 🚀
+      </p>
     </div>
   );
 };

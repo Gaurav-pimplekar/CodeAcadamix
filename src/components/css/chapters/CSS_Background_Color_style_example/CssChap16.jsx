@@ -21,6 +21,15 @@ const CssChap16 = () => {
         <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
           <FaPalette className="mr-2 text-green-500" /> Setting Background Colors
         </h2>
+
+        {/* Explanation */}
+        <p className="text-gray-800 mt-2">
+          The background color of an element can be set using the <code>background-color</code> property in CSS.
+          This property defines the background color for an element and can take color names, hex values, RGB, HSL,
+          or transparent values.
+        </p>
+
+        {/* Example Code */}
         <pre className="bg-gray-800 text-white p-4 rounded-lg mt-4">
           <code>
             {`/* styles.css */
@@ -34,16 +43,44 @@ const CssChap16 = () => {
     background-color: red;
     color: white;
     padding: 20px;
-}`}          
+}
+
+.bg-gradient {
+    background: linear-gradient(to right, red, yellow);
+    color: black;
+    padding: 20px;
+}
+
+.bg-image {
+    background: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+}`}
           </code>
         </pre>
+
+        {/* Example Usage */}
         <p className="text-gray-800 mt-2">Example usage:</p>
         <pre className="bg-gray-800 text-white p-4 rounded-lg mt-4">
           <code>
             {`<div class="bg-blue">This is a blue background.</div>
-<div class="bg-red">This is a red background.</div>`}
+<div class="bg-red">This is a red background.</div>
+<div class="bg-gradient">This is a gradient background.</div>
+<div class="bg-image">This is a background image.</div>`}
           </code>
         </pre>
+
+        {/* Example Output */}
+        <div className="mt-6 space-y-4">
+          <div className="bg-blue-500 text-white p-4 rounded">This is a blue background.</div>
+          <div className="bg-red-500 text-white p-4 rounded">This is a red background.</div>
+          <div className="bg-gradient text-black p-4 rounded">This is a gradient background.</div>
+          <div className="bg-cover bg-center text-white p-4 rounded" style={{ backgroundImage: "url('https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=')" }}>
+            This is a background image.
+          </div>
+        </div>
       </section>
       
       <section className="mb-6">

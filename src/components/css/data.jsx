@@ -143,12 +143,6 @@ export const cssData = [
     exerciseComponents: [<CssExercise7 />]
   },
   {
-    name: "CSS selection example",
-    exercise: ["Exercise 1"],
-    intro: <CssChap8 />,
-    exerciseComponents: [<CssExercise8 />]
-  },
-  {
     name: "Creating and using CSS file",
     exercise: ["Exercise 1"],
     intro: <CssChap9 />,
@@ -171,6 +165,12 @@ export const cssData = [
     exercise: ["Exercise 1"],
     intro: <CssChap12 />,
     exerciseComponents: [<CssExercise12 />]
+  },
+  {
+    name: "CSS selection example",
+    exercise: ["Exercise 1"],
+    intro: <CssChap8 />,
+    exerciseComponents: [<CssExercise8 />]
   },
   {
     name: "CSS Colors",
