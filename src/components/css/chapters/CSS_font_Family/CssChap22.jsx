@@ -1,5 +1,6 @@
 ﻿import React from "react";
 import { FaFont, FaPalette, FaCheckCircle } from "react-icons/fa";
+import { FaBook, FaLaptopCode, FaFeatherAlt, FaUserEdit } from "react-icons/fa";
 
 const CssChap22 = () => {
   return (
@@ -7,6 +8,8 @@ const CssChap22 = () => {
       <h1 className="text-3xl font-bold text-blue-600 mb-4 flex items-center">
         <FaFont className="mr-2" /> CSS Font Family
       </h1>
+
+      
       
       <section className="mb-6">
         <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
@@ -16,6 +19,88 @@ const CssChap22 = () => {
           The <code>font-family</code> property in CSS defines the font of the text. You can specify multiple font families to ensure a fallback if the preferred font is not available.
         </p>
       </section>
+
+      <section className="p-6 bg-gray-100 rounded-lg shadow-lg">
+      <h1 className="text-2xl font-bold flex items-center gap-2">
+        <FaFont /> CSS Font Family
+      </h1>
+
+      <p className="text-gray-700">
+        The <code>font-family</code> property in CSS specifies the typeface used for text. It allows you to choose between different categories of fonts.
+      </p>
+
+      {/* Serif Fonts */}
+      <div className="mt-6">
+        <h2 className="text-xl font-semibold flex items-center gap-2">
+          <FaBook /> Serif Fonts
+        </h2>
+        <p className="text-gray-800">
+          Serif fonts have small strokes (serifs) at the ends of letters, making them ideal for print media and formal documents.
+        </p>
+        <pre className="bg-gray-200 p-2 rounded mt-2">
+          {`p { font-family: 'Times New Roman', serif; }`}
+        </pre>
+        <p className="mt-2 font-serif text-lg">Example text using a serif font.</p>
+      </div>
+
+      {/* Sans-Serif Fonts */}
+      <div className="mt-6">
+        <h2 className="text-xl font-semibold flex items-center gap-2">
+          <FaLaptopCode /> Sans-Serif Fonts
+        </h2>
+        <p className="text-gray-800">
+          Sans-serif fonts do not have small strokes at the ends of letters. They are clean and modern, commonly used on websites.
+        </p>
+        <pre className="bg-gray-200 p-2 rounded mt-2">
+          {`p { font-family: 'Arial', sans-serif; }`}
+        </pre>
+        <p className="mt-2 font-sans text-lg">Example text using a sans-serif font.</p>
+      </div>
+
+      {/* Monospace Fonts */}
+      <div className="mt-6">
+        <h2 className="text-xl font-semibold flex items-center gap-2">
+          <FaFeatherAlt /> Monospace Fonts
+        </h2>
+        <p className="text-gray-800">
+          In monospace fonts, every character takes up the same width, making them useful for coding and terminal applications.
+        </p>
+        <pre className="bg-gray-200 p-2 rounded mt-2">
+          {`p { font-family: 'Courier New', monospace; }`}
+        </pre>
+        <p className="mt-2 font-mono text-lg">Example text using a monospace font.</p>
+      </div>
+
+      {/* Cursive Fonts */}
+      <div className="mt-6">
+        <h2 className="text-xl font-semibold flex items-center gap-2">
+          <FaUserEdit /> Cursive Fonts
+        </h2>
+        <p className="text-gray-800">
+          Cursive fonts have flowing, handwritten styles. They are decorative but should be used sparingly for readability.
+        </p>
+        <pre className="bg-gray-200 p-2 rounded mt-2">
+          {`p { font-family: 'Brush Script MT', cursive; }`}
+        </pre>
+        <p className="mt-2 font-cursive text-lg">Example text using a cursive font.</p>
+      </div>
+
+      {/* Fantasy Fonts */}
+      <div className="mt-6">
+        <h2 className="text-xl font-semibold flex items-center gap-2">
+          <FaFeatherAlt /> Fantasy Fonts
+        </h2>
+        <p className="text-gray-800">
+          Fantasy fonts are decorative and creative, often used in gaming and entertainment designs.
+        </p>
+        <pre className="bg-gray-200 p-2 rounded mt-2">
+          {`p { font-family: 'Impact', fantasy; }`}
+        </pre>
+        <p className="mt-2 text-lg" style={{ fontFamily: "Impact, fantasy" }}>
+          Example text using a fantasy font.
+        </p>
+      </div>
+    </section>
       
       <section className="mb-6">
         <h2 className="text-2xl font-semibold text-gray-700 flex items-center">
